@@ -12,7 +12,7 @@
 #
 class lxc::networking::nat inherits lxc::params {
 
-  private()
+#  private()
 
   case $lxc::lxc_networking_nat_enable {
     true: {

@@ -12,7 +12,7 @@
 #
 class lxc::sources::precise {
 
-  private()
+#  private()
 
   contain 'apt'
 
