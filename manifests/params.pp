@@ -31,11 +31,13 @@ class lxc::params {
         }
       }
     }
-    default: {
-      #fail("${::operatingsystem} is not supported by ${module_name} module.")
+    'RedHat', 'CentOS': {
       $lxc_ruby_bindings_gem_deps = [
         'gcc', 'lxc-devel'
       ]
+    }
+    default: {
+      fail("${::operatingsystem} is not supported by ${module_name} module.")
     }
   }
 
